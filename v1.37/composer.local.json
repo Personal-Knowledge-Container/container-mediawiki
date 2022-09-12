@@ -1,0 +1,17 @@
+{
+    "require": {
+        "rht/merkle-tree": "dev-master",
+        "mediawiki/maps": "9.0",
+        "mediawiki/semantic-media-wiki":"~4.0",
+        "mediawiki/sub-page-list": "~1.4",
+        "mediawiki/semantic-scribunto": "~2.2",
+        "mediawiki/semantic-result-formats": "~4.0"
+    },
+    "extra": {
+		"merge-plugin": {
+			"include": [
+				"extensions/OpenIDConnect/composer.json"
+			]
+		}
+	}
+}

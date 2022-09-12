@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aursani",
+			"Mehtab ahmed"
+		]
+	},
+	"cargo-viewdata-format": "فارميٽ:",
+	"cargo-drilldown-fulltext": "سمورو متن",
+	"cargo-drilldown-pagetext": "صفحي جو متن",
+	"cargo-drilldown-filetext": "فائيل جو متن",
+	"cargo-pageschemas-tablename": "ٽيبل جو نالو:"
+}

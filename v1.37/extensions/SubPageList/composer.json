@@ -1,0 +1,42 @@
+{
+	"name": "mediawiki/sub-page-list",
+	"type": "mediawiki-extension",
+	"description": "SubPageList is a lightweight extension to display lists of subpages",
+	"keywords": [
+		"MediaWiki",
+		"SubPage",
+		"SubPageList"
+	],
+	"homepage": "https://github.com/JeroenDeDauw/SubPageList/blob/master/README.md",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Jeroen De Dauw",
+			"email": "jeroendedauw@gmail.com",
+			"homepage": "https://www.entropywins.wtf",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/JeroenDeDauw/SubPageList/issues",
+		"irc": "irc://irc.freenode.net/mediawiki"
+	},
+	"require": {
+		"php": ">=7.1",
+		"composer/installers": "^1.0.1",
+		"mediawiki/parser-hooks": "~1.3"
+	},
+	"autoload": {
+		"files" : [
+			"SubPageList.php"
+		],
+		"psr-4": {
+			"SubPageList\\": "src/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
+	}
+}

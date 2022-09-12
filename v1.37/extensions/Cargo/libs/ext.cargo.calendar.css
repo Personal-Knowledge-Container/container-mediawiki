@@ -1,0 +1,12 @@
+.fc-day-grid-event .fc-content {
+	white-space: normal;
+}
+
+.mw-widget-dateInputWidget {
+	position: absolute;
+	z-index: 2;
+}
+
+a.fc-event:visited {
+	color: #EAEAEA;
+}

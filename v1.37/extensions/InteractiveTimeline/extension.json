@@ -1,0 +1,38 @@
+{
+	"name": "InteractiveTimeline",
+	"version": "1.9.0",
+	"license-name": "GPL-2.0+",
+	"author": [
+		"Chris Page"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:InteractiveTimeline",
+	"descriptionmsg": "interactivetimeline-desc",
+	"type": "parserhook",
+	"config": {
+ 		"ITvisjsCDNjs": "https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js",
+ 		"ITvisjsCDNcss": "https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css"
+	},
+	"MessagesDirs": {
+		"InteractiveTimeline": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"InteractiveTimeline": "InteractiveTimeline.body.php"
+	},
+	"ResourceModules": {
+		"ext.InteractiveTimeline.loader": {
+			"scripts": "modules/ext.interactivetimeline.js",
+			"styles": "modules/ext.interactivetimeline.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "InteractiveTimeline"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "InteractiveTimeline::onParserFirstCallInit",
+		"BeforePageDisplay": "InteractiveTimeline::onBeforePageDisplay"
+	},
+	"manifest_version": 1
+}

@@ -1,0 +1,19 @@
+{
+	"private": true,
+	"scripts": {
+		"test:cx3": "cd app && npm run test",
+		"test:cx2": "grunt test",
+		"precommit": "npm run test:cx2 && git diff --name-only --staged --exit-code app || npm run test:cx3",
+		"test": "npm run test:cx2 && npm run test:cx3"
+	},
+	"pre-commit": "precommit",
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.20.0",
+		"grunt": "1.4.0",
+		"grunt-banana-checker": "0.9.0",
+		"grunt-eslint": "23.0.0",
+		"grunt-stylelint": "0.16.0",
+		"pre-commit": "^1.2.2",
+		"stylelint-config-wikimedia": "0.10.3"
+	}
+}

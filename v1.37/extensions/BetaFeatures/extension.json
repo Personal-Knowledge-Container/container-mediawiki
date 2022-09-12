@@ -1,0 +1,93 @@
+{
+	"name": "BetaFeatures",
+	"version": "0.1",
+	"author": [
+		"MarkTraceur (Mark Holmquist)"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BetaFeatures",
+	"descriptionmsg": "betafeatures-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.37.0"
+	},
+	"config": {
+		"BetaFeaturesWhitelist": {
+			"value": null
+		},
+		"BetaFeatures": {
+			"value": []
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"BetaFeaturesAlias": "BetaFeatures.alias.php"
+	},
+	"APIListModules": {
+		"betafeatures": "MediaWiki\\Extension\\BetaFeatures\\ApiQueryBetaFeatures"
+	},
+	"Hooks": {
+		"SaveUserOptions": "MediaWiki\\Extension\\BetaFeatures\\Hooks::updateUserCounts",
+		"GetPreferences": "MediaWiki\\Extension\\BetaFeatures\\Hooks::getPreferences",
+		"PersonalUrls": "MediaWiki\\Extension\\BetaFeatures\\Hooks::getBetaFeaturesLink",
+		"LoadExtensionSchemaUpdates": "MediaWiki\\Extension\\BetaFeatures\\Hooks::getSchemaUpdates",
+		"MakeGlobalVariablesScript": "MediaWiki\\Extension\\BetaFeatures\\Hooks::onMakeGlobalVariablesScript",
+		"ExtensionTypes": "MediaWiki\\Extension\\BetaFeatures\\Hooks::onExtensionTypes"
+	},
+	"MessagesDirs": {
+		"BetaFeatures": [
+			"i18n",
+			"i18n/api"
+		]
+	},
+	"ResourceModules": {
+		"ext.betaFeatures": {
+			"scripts": [
+				"betafeatures.js"
+			],
+			"styles": [
+				"betafeatures.less"
+			],
+			"messages": [
+				"betafeatures-feature-autoenrolled"
+			],
+			"dependencies": [
+				"jquery.client",
+				"oojs-ui-core"
+			],
+			"targets": [
+				"mobile",
+				"desktop"
+			]
+		},
+		"ext.betaFeatures.styles": {
+			"styles": [
+				"betafeatures.nojs.less"
+			],
+			"targets": [
+				"mobile",
+				"desktop"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BetaFeatures/resources"
+	},
+	"JobClasses": {
+		"updateBetaFeaturesUserCounts": "MediaWiki\\Extension\\BetaFeatures\\UpdateBetaFeatureUserCountsJob"
+	},
+	"SpecialPages": {
+		"BetaFeatures": "MediaWiki\\Extension\\BetaFeatures\\SpecialBetaFeatures"
+	},
+	"AutoloadClasses": {
+		"BetaFeatures": "includes/BetaFeatures.php",
+		"MediaWiki\\Extension\\BetaFeatures\\BetaFeatures": "includes/BetaFeatures.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\BetaFeatures\\": "includes/"
+	},
+	"TestAutoloadClasses": {
+		"BetaFeaturesTestCase": "tests/phpunit/BetaFeaturesTestCase.php"
+	},
+	"manifest_version": 2
+}

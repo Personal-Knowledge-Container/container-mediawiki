@@ -1,0 +1,10 @@
+/* itl-event divs describe the events set for the timeline
+ * there's no reason for them to ever be visible.
+ */
+div.itl-event {
+	display: none;
+}
+
+div.itl-config {
+	display: none;
+}
