@@ -53,7 +53,7 @@ RUN npm install
 # cd to /Widgets
 WORKDIR ${ResourceBasePath}/extensions/Widgets
 RUN composer update --no-dev
-RUN chown -R www-data:www-data  ./compiled_templates/
+# RUN chown -R www-data:www-data  ./compiled_templates/
 
 # for 3D
 WORKDIR ${ResourceBasePath}/extensions/3D
@@ -62,7 +62,7 @@ RUN composer install
 
 # copy skins
 COPY ./skins/MinervaNeue ${ResourceBasePath}/skins/MinervaNeue
-COPY ./skins/MinervaNeue ${ResourceBasePath}/skins/Vector
+# COPY ./skins/MinervaNeue ${ResourceBasePath}/skins/Vector
 
 
 # copy logos
