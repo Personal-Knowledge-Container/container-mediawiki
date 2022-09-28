@@ -32,14 +32,11 @@ buildMulti:
 
 buildMultiLocal:
 #	docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 -t localhost:5000/pkc_semanticwiki:${CURRENT_TAG} --push .
-	docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 -t localhost:5000/pkc_semanticwiki:${CURRENT_TAG} --push .
+	docker buildx build --platform linux/amd64,linux/arm64 -t localhost:5000/pkc_semanticwiki:${CURRENT_TAG} --push .
 
 
 # docker build -t emhavis/pkc_semanticwiki:v1.37.1.build.2 --build-arg BUILD_SMW=true .
 # 
-
-
-
 # docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t emhavis/pkc_matomo:v.02 . 
 # docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t emhavis/pkc_moodle:v.01 . 
 # docker buildx inspect --bootstrap
