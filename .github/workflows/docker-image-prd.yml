@@ -56,5 +56,5 @@ jobs:
           context: ./v1.37/
           platforms: linux/amd64,linux/arm/v7
           push: ${{ github.event_name != 'pull_request' }}
-          tags: latest
+          tags: emhavis/pkc_semanticwiki:latest
           labels: ${{ steps.pkc-mw.outputs.labels }}
