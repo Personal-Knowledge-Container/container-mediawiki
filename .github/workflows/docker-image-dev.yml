@@ -1,4 +1,4 @@
-name: Build and push docker image of PKC's Mediawiki DEV into Docker Hub repository
+name: Build and push docker image of PKC's Mediawiki into Docker Hub repository
 
 on:
   workflow_dispatch: # Putting here is also fine!!
@@ -56,5 +56,5 @@ jobs:
           context: ./v1.37/
           platforms: linux/amd64,linux/arm/v7
           push: ${{ github.event_name != 'pull_request' }}
-          tags: latest_dev
+          tags: emhavis/pkc_semanticwiki:latest_dev
           labels: ${{ steps.pkc-mw.outputs.labels }}
